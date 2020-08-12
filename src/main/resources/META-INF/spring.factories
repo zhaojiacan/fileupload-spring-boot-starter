@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.github.zhaojiacan.fileupload.autoconfigure.LocalAutoConfigure,\
+com.github.zhaojiacan.fileupload.autoconfigure.QiniuAutoConfigure,\
+com.github.zhaojiacan.fileupload.autoconfigure.AliossAutoConfigure

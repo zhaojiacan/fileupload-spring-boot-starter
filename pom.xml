@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.github.zhaojiacan</groupId>
+    <artifactId>fileupload</artifactId>
+    <version>0.1.1</version>
+    <name>fileupload-spring-boot-starter</name>
+    <description>
+        集成七牛云、阿里云oss、本地上传 spring boot start
+    </description>
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring-boot.version>2.2.0.RELEASE</spring-boot.version>
+        <hutool.version>5.3.6</hutool.version>
+        <qiniu.version>[7.2.0, 7.2.99]</qiniu.version>
+        <aliyunoss.version>3.9.1</aliyunoss.version>
+    </properties>
+    <url>https://github.com/zhaojiacan/</url>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>zhaojiacan</name>
+            <email>898435128@qq.com</email>
+            <organization>zhaojiacan</organization>
+            <url>https://github.com/zhaojiacan</url>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/zhaojiacan/fileupload-spring-boot-starter.git</connection>
+        <developerConnection>scm:git:ssh://github.com/zhaojiacan/fileupload-spring-boot-starter.git
+        </developerConnection>
+        <url>https://github.com/zhaojiacan/fileupload-spring-boot-starter.git</url>
+    </scm>
+    <dependencies>
+        <!--spring web-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring-boot.version}</version>
+            <optional>true</optional>
+        </dependency>
+        <!--hutool-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
+        </dependency>
+        <!--qiniuApi-->
+        <dependency>
+            <groupId>com.qiniu</groupId>
+            <artifactId>qiniu-java-sdk</artifactId>
+            <version>${qiniu.version}</version>
+        </dependency>
+        <!--qiniuApi-->
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <version>${aliyunoss.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>7</source>
+                    <target>7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
